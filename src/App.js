@@ -1,5 +1,6 @@
 import './App.css';
-import Main from './pages/Main';
+import Main from './components/Main';
+import Dish from './pages/Dish';
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,7 +12,7 @@ function App() {
     <Router>
       <Main />
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/dish" element={<Dish />} />
       </Routes>
     </Router>
   );

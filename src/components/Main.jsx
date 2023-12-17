@@ -10,6 +10,7 @@ import Bell from '../media/bell.png'
 import Category from '../media/Category.png'
 import Heart from '../media/Heart.png'
 import Buy from '../media/Buy.png'
+import { Link } from 'react-router-dom'
 
 const Main = () => {
     return(
@@ -57,23 +58,25 @@ const Main = () => {
                 </div>
             </div>
             <div className='flex justify-between px-2'>
-                <div className='bg-gray-600 flex flex-col w-[175px] rounded-lg'>
-                    <div className='flex place-content-center pt-1'>
-                        <img className='h-[150px] w-[150px]' src={Shrimp} alt="Shrimp 1" />
-                    </div>    
-                    <h2 className='text-white flex place-content-center pt-3'>Fried Shrimp</h2>
-                    <div className='flex place-content-center gap-2'>
-                        <div className='flex text-gray-500'>
-                            <img className='h-4' src={Star} alt="Star" />
-                            <p>4.8(163)</p>
+                <Link to='/dish'>
+                    <div className='bg-gray-600 flex flex-col w-[175px] rounded-lg'>
+                        <div className='flex place-content-center pt-1'>
+                            <img className='h-[150px] w-[150px]' src={Shrimp} alt="Shrimp 1" />
+                        </div>    
+                        <h2 className='text-white flex place-content-center pt-3'>Fried Shrimp</h2>
+                        <div className='flex place-content-center gap-2'>
+                            <div className='flex text-gray-500'>
+                                <img className='h-4' src={Star} alt="Star" />
+                                <p>4.8(163)</p>
+                            </div>
+                            <div className='flex text-gray-500'>
+                                <img className='h-4' src={Stopwatch} alt="Stopwatch" />
+                                <p>20 min</p>
+                            </div>
                         </div>
-                        <div className='flex text-gray-500'>
-                            <img className='h-4' src={Stopwatch} alt="Stopwatch" />
-                            <p>20 min</p>
-                        </div>
+                        <h2 className='text-[#FF7269] flex place-content-center py-1'>€29.00</h2>
                     </div>
-                    <h2 className='text-[#FF7269] flex place-content-center py-1'>€29.00</h2>
-                </div>
+                </Link>
                 <div className='bg-gray-600 flex flex-col w-[175px] rounded-lg'>
                     <div className='flex place-content-center pt-2'>
                         <img className='h-[140px] w-[140px]' src={Shrimp2} alt="Shrimp 2" />
