@@ -2,7 +2,7 @@ import React from 'react'
 import Arrow from '../media/Arrow - Left 2.png'
 import Heart from '../media/Heart.png'
 import Leaves from '../media/leaves.png'
-import Shrimp from '../media/shrimp1.png'
+import Shrimp from '../media/shrimp2.png'
 import Star from '../media/Star.png'
 import Stopwatch from '../media/stopwatch.png'
 import Fire from '../media/Fire.png'
@@ -12,7 +12,7 @@ import Corn from '../media/corn.png'
 import Carrot from '../media/carrot.png'
 import { Link } from 'react-router-dom'
 
-const Dish = () => {
+const Dish2 = () => {
     return(
         <div className='bg-black h-[850px]'>
             <div className='p-3 flex justify-between'>
@@ -73,4 +73,4 @@ const Dish = () => {
     )
 }
 
-export default Dish
+export default Dish2

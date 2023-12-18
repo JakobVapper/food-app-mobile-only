@@ -78,20 +78,22 @@ const Main = () => {
                     </div>
                 </Link>
                 <div className='bg-gray-600 flex flex-col w-[175px] rounded-lg'>
-                    <div className='flex place-content-center pt-2'>
-                        <img className='h-[140px] w-[140px]' src={Shrimp2} alt="Shrimp 2" />
-                    </div>    
-                    <h2 className='text-white flex place-content-center pt-3'>Fried Shrimp</h2>
-                    <div className='flex place-content-center gap-2'>
-                        <div className='flex text-gray-500'>
-                            <img className='h-4' src={Star} alt="Star" />
-                            <p>4.8(163)</p>
+                    <Link to='/dish2'>
+                        <div className='flex place-content-center pt-2'>
+                            <img className='h-[140px] w-[140px]' src={Shrimp2} alt="Shrimp 2" />
+                        </div>    
+                        <h2 className='text-white flex place-content-center pt-3'>Fried Shrimp</h2>
+                        <div className='flex place-content-center gap-2'>
+                            <div className='flex text-gray-500'>
+                                <img className='h-4' src={Star} alt="Star" />
+                                <p>4.8(163)</p>
+                            </div>
+                            <div className='flex text-gray-500'>
+                                <img className='h-4' src={Stopwatch} alt="Stopwatch" />
+                                <p>20 min</p>
+                            </div>
                         </div>
-                        <div className='flex text-gray-500'>
-                            <img className='h-4' src={Stopwatch} alt="Stopwatch" />
-                            <p>20 min</p>
-                        </div>
-                    </div>
+                    </Link>
                     <h2 className='text-[#FF7269] flex place-content-center py-2'>€29.00</h2>
                 </div>
             </div>
