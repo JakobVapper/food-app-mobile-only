@@ -1,5 +1,4 @@
-import React from 'react'
-import Menu from '../media/burger-menu.png'
+import React, { useState } from 'react';
 import Filter from '../media/Filter.png'
 import Arrow from '../media/Arrow - Right.png'
 import Shrimp from '../media/shrimp1.png'
@@ -10,23 +9,108 @@ import Bell from '../media/bell.png'
 import Category from '../media/Category.png'
 import Heart from '../media/Heart.png'
 import Buy from '../media/Buy.png'
+import Mc from '../media/mastercard.png'
+import Burger from '../media/burger.png'
+import Park from '../media/parking.png'
+import Plane from '../media/plane.png'
+import Shampoo from '../media/shampoo.png'
 import { Link } from 'react-router-dom'
 
 const Main = () => {
-    return(
-        <div className='bg-black '>
-            <div className='pb-[30px] pt-[20px]'>
-                <div>
-                    <img className='h-[40px]' src={Menu} alt="Hamburger menu" />
-                </div>
-                <div className='flex flex-row justify-between pt-[10px]'>
-                    <div>
-                        <p className='text-gray-500 text-lg'>Good morning</p>
-                        <p className='text-white text-xl'>Foo Fighters</p>
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const toggleMenu = () => {
+      setIsOpen(!isOpen);
+    };
+  
+    const closeMenu = () => {
+      setIsOpen(false);
+    };
+  
+    return (
+        <div className='bg-black'>
+            <nav className="p-4">
+                <div className="flex items-center">
+                <button
+                    className="text-white block lg:hidden focus:outline-none"
+                    onClick={toggleMenu}
+                >
+                    <svg
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    >
+                    {isOpen ? (
+                        <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                        />
+                    ) : (
+                        <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 6h16M4 12h16m-7 6h7"
+                        />
+                    )}
+                    </svg>
+                </button>
+                <div
+                    className={`${
+                    isOpen ? 'translate-x-0' : '-translate-x-full'
+                    } lg:hidden fixed top-0 left-0 h-full bg-gray-900 w-28 z-50 transition duration-300 ease-in-out transform`}
+                >
+                    <button
+                    onClick={closeMenu}
+                    className="text-white block mt-4 ml-2 lg:hidden focus:outline-none"
+                    >
+                    <svg
+                        className="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 19l-7-7 7-7"
+                        />
+                    </svg>
+                    </button>
+                    <div className="text-sm pt-8">
+                        <a href="#" className="flex justify-center mt-20">
+                            <img src={Mc} alt="Mastercard" />
+                        </a>
+                        <a href="#" className="flex justify-center mt-7">
+                            <img src={Buy} alt="Cart" />
+                        </a>
+                        <a href="#" className="flex justify-center mt-7">
+                            <img src={Park} alt="Parking" />
+                        </a>
+                        <a href="#" className="flex justify-center mt-7">
+                            <img src={Burger} alt="Burger" />
+                        </a>
+                        <a href="#" className="flex justify-center mt-7">
+                            <img src={Plane} alt="Plane" />
+                        </a>
+                        <a href="#" className="flex justify-center mt-7">
+                            <img src={Shampoo} alt="Shampoo" />
+                        </a>
                     </div>
-                    <p className='text-4xl'>🍔</p>
                 </div>
-            </div>
+                </div>
+            </nav>
+            <div className='flex flex-row justify-between pt-[10px]'>
+                <div>
+                    <p className='text-gray-500 text-lg'>Good morning</p>
+                    <p className='text-white text-xl'>Foo Fighters</p>
+                </div>
+                <p className='text-4xl'>🍔</p>
+            </div>    
             <div className='px-[5px] pb-[15px]'>
                 <div className='bg-gray-600 rounded-lg flex flex-row justify-between p-[20px]'>
                     <p className='text-gray-400'>Find your dishes</p>
@@ -97,7 +181,7 @@ const Main = () => {
                     <h2 className='text-[#FF7269] flex place-content-center py-2'>€29.00</h2>
                 </div>
             </div>
-            <div className='flex place-content-center pt-[80px] pb-[15px] gap-16'>
+            <div className='flex place-content-center pt-[80px] pb-[55px] gap-16'>
                 <img src={Bell} alt="Bell" />
                 <img src={Category} alt="Category" />
                 <img src={Heart} alt="Heart" />

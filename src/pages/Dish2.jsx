@@ -2,7 +2,6 @@ import React from 'react'
 import Arrow from '../media/Arrow - Left 2.png'
 import Heart from '../media/Heart.png'
 import Leaves from '../media/leaves.png'
-import Shrimp from '../media/shrimp2.png'
 import Star from '../media/Star.png'
 import Stopwatch from '../media/stopwatch.png'
 import Fire from '../media/Fire.png'
@@ -11,6 +10,7 @@ import Chilli from '../media/chilli.png'
 import Corn from '../media/corn.png'
 import Carrot from '../media/carrot.png'
 import { Link } from 'react-router-dom'
+import NewShrimp from '../media/newshrimp.png'
 
 const Dish2 = () => {
     return(
@@ -23,7 +23,7 @@ const Dish2 = () => {
             </div>
             <div className='flex place-content-center'>
                 <img src={Leaves} alt="Leaves" />
-                <img className='absolute py-10 w-64' src={Shrimp} alt="Shrimp" />
+                <img className='absolute py-10 w-96' src={NewShrimp} alt="Second Shrimp" />
             </div>
             <div className='pt-36'>
                 <h1 className='text-white text-3xl text-center'>Fried Shrimp</h1>
